@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>カフェ そら | 壊れた版デモ</title>
+<link rel="stylesheet" href="css/broken.css">
+</head>
+<body>
+<header>
+  <div class="header-inner wrap">
+    <a href="broken.html"><strong>カフェ そら</strong></a>
+    <button id="menuButton" type="button">メニュー</button>
+    <nav aria-label="メインナビゲーション">
+      <ul id="navList">
+        <li><a href="#menu">メニュー</a></li>
+        <li><a href="#order">注文シミュレーション</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="index.html">修正版を見る</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>架空のカフェサイト（壊れた版）</h1>
+    <p>意図的に不具合を再現しています。スマホで見ると横スクロールが出ます。</p>
+  </section>
+
+  <section id="menu">
+    <h2>メニュー</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="images/photo-missing.jpg" alt="">
+        <h3>ブレンドコーヒー 500円</h3>
+        <p>すっきりした味わいの定番コーヒーです。</p>
+        <p><a href="menu.html">メニュー詳細を見る</a></p>
+      </article>
+      <article class="card">
+        <h3>カフェラテ 600円</h3>
+        <p>まろやかなミルクとエスプレッソの組み合わせです。</p>
+      </article>
+      <article class="card">
+        <h3>チーズケーキ 550円</h3>
+        <p>コーヒーと相性の良い、しっとりしたケーキです。</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="order" class="order">
+    <h2>注文シミュレーション</h2>
+    <p>ブレンドコーヒー 500円 ×
+      <select id="qty" aria-label="数量">
+        <option value="1">1個</option>
+        <option value="2">2個</option>
+        <option value="3">3個</option>
+      </select>
+      ＝ <strong><span id="total">500</span>円</strong>
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <form id="contactForm">
+      <label for="name">お名前</label>
+      <input id="name" type="text">
+      <label for="email">メールアドレス</label>
+      <input id="email" type="text">
+      <label for="message">お問い合わせ内容</label>
+      <textarea id="message" rows="4"></textarea>
+      <button type="submit">送信する</button>
+      <p id="formResult"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>サンプルサイトです。実在の店舗・クライアント案件ではありません。</p>
+  <p><a href="index.html">修正版を見る</a></p>
+</footer>
+<script src="js/broken.js"></script>
+</body>
+</html>

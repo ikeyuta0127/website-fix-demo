@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カフェ そら | 修正版デモ</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="header-inner wrap">
+    <a href="index.html"><strong>カフェ そら</strong></a>
+    <button id="menuButton" type="button" aria-expanded="false" aria-controls="navList">メニュー</button>
+    <nav aria-label="メインナビゲーション">
+      <ul id="navList">
+        <li><a href="#menu">メニュー</a></li>
+        <li><a href="#order">注文シミュレーション</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="broken.html">壊れた版を見る</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>架空のカフェサイト（修正版）</h1>
+    <p>表示崩れ・フォーム・JSの不具合を修正したデモです。壊れた版との比較は上のリンクから。</p>
+  </section>
+
+  <section id="menu">
+    <h2>メニュー</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="images/cafe.svg" alt="店内の様子（イメージ）">
+        <h3>ブレンドコーヒー 500円</h3>
+        <p>すっきりした味わいの定番コーヒーです。</p>
+        <p><a href="#menu">メニュー詳細を見る</a></p>
+      </article>
+      <article class="card">
+        <h3>カフェラテ 600円</h3>
+        <p>まろやかなミルクとエスプレッソの組み合わせです。</p>
+      </article>
+      <article class="card">
+        <h3>チーズケーキ 550円</h3>
+        <p>コーヒーと相性の良い、しっとりしたケーキです。</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="order" class="order">
+    <h2>注文シミュレーション</h2>
+    <p>ブレンドコーヒー 500円 ×
+      <select id="qty" aria-label="数量">
+        <option value="1">1個</option>
+        <option value="2">2個</option>
+        <option value="3">3個</option>
+      </select>
+      ＝ <strong><span id="total">500</span>円</strong>
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <p>デモのため、実際には送信されません。</p>
+    <form id="contactForm" novalidate>
+      <label for="name">お名前</label>
+      <input id="name" type="text" autocomplete="name">
+      <p class="error" id="nameError" aria-live="polite"></p>
+      <label for="email">メールアドレス</label>
+      <input id="email" type="text" autocomplete="email">
+      <p class="error" id="emailError" aria-live="polite"></p>
+      <label for="message">お問い合わせ内容</label>
+      <textarea id="message" rows="4"></textarea>
+      <p class="error" id="messageError" aria-live="polite"></p>
+      <button type="submit">送信する</button>
+      <p class="success" id="formResult" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>サンプルサイトです。実在の店舗・クライアント案件ではありません。</p>
+  <p><a href="broken.html">壊れた版（修正前）を見る</a> / 修正内容は README.md を参照</p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
